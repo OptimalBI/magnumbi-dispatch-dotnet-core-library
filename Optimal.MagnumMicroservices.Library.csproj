@@ -9,8 +9,8 @@
     <Description>This is the Client Library for use with Magnum Microservices.</Description>
     <NeutralLanguage>en-NZ</NeutralLanguage>
     <PackageTags>MagnumMicroservices</PackageTags>
-    <AssemblyVersion>1.0.1.0</AssemblyVersion>
-    <Version>1.0.1.1</Version>
+    <AssemblyVersion>1.0.1.2</AssemblyVersion>
+    <Version>1.0.1.2</Version>
   </PropertyGroup>
 
   <ItemGroup>
