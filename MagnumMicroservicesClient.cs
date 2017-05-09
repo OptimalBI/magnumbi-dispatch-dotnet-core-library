@@ -4,12 +4,14 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Security.Authentication;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 using Optimal.MagnumMicroservices.Library.Models;
 
 namespace Optimal.MagnumMicroservices.Library{
     public class MagnumMicroservicesClient{
+        private readonly CancellationTokenSource cts;
         private readonly HttpClient httpClient;
         private readonly string serverAddress;
 
@@ -20,9 +22,11 @@ namespace Optimal.MagnumMicroservices.Library{
         /// <param name="accessToken">The access token</param>
         /// <param name="secretToken">Secret token</param>
         /// <param name="verifySsl">Verify ssl certificate. Reccomended to leave true.</param>
+        /// <param name="cts">Optional token source used to cancel in progress requests.</param>
         public MagnumMicroservicesClient(string serverAddress, string accessToken, string secretToken,
-            bool verifySsl = true){
+            bool verifySsl = true, CancellationTokenSource cts = default(CancellationTokenSource)){
             this.serverAddress = serverAddress;
+            this.cts = cts;
 
             HttpClientHandler handler =
                 new HttpClientHandler{
@@ -53,7 +57,7 @@ namespace Optimal.MagnumMicroservices.Library{
         /// </summary>
         /// <returns></returns>
         public async Task<HttpStatusCode> CheckStatusCode(){
-            HttpResponseMessage response = await this.httpClient.GetAsync($"{this.serverAddress}/job/");
+            HttpResponseMessage response = await this.httpClient.GetAsync($"{this.serverAddress}/job/", this.cts.Token);
             return response.StatusCode;
         }
 
@@ -73,7 +77,7 @@ namespace Optimal.MagnumMicroservices.Library{
 
             // Send query.
             HttpResponseMessage response =
-                await this.httpClient.PostAsync($"{this.serverAddress}/job/request", content);
+                await this.httpClient.PostAsync($"{this.serverAddress}/job/request", content, this.cts.Token);
             if (!response.IsSuccessStatusCode) {
                 throw new HttpRequestException($"Failed to get job code:{response.StatusCode}");
             }
@@ -104,7 +108,7 @@ namespace Optimal.MagnumMicroservices.Library{
 
             // Send query.
             HttpResponseMessage response =
-                await this.httpClient.PostAsync($"{this.serverAddress}/job/submit", content);
+                await this.httpClient.PostAsync($"{this.serverAddress}/job/submit", content, this.cts.Token);
             if (!response.IsSuccessStatusCode) {
                 throw new HttpRequestException($"Failed to queue job:{response.StatusCode}");
             }
@@ -119,7 +123,7 @@ namespace Optimal.MagnumMicroservices.Library{
 
             // Send query.
             HttpResponseMessage response =
-                await this.httpClient.PostAsync($"{this.serverAddress}/job/complete", content);
+                await this.httpClient.PostAsync($"{this.serverAddress}/job/complete", content, this.cts.Token);
             if (!response.IsSuccessStatusCode) {
                 string data = await response.Content.ReadAsStringAsync();
                 throw new HttpRequestException(

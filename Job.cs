@@ -26,8 +26,8 @@ namespace Optimal.MagnumMicroservices.Library{
 
         public async Task Complete(){
             await this.ParentClient.CompleteJob(
-                appId: this.AppId,
-                jobId: this.JobId
+                this.AppId,
+                this.JobId
             );
         }
     }
