@@ -27,6 +27,9 @@ namespace Optimal.MagnumMicroservices.Library{
             bool verifySsl = true, CancellationTokenSource cts = default(CancellationTokenSource)){
             this.serverAddress = serverAddress;
             this.cts = cts;
+            if (this.cts == null) {
+                this.cts = new CancellationTokenSource();
+            }
 
             HttpClientHandler handler =
                 new HttpClientHandler{
