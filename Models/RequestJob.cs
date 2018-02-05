@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace Optimal.MagnumMicroservices.Library.Models{
+namespace MagnumBi.Dispatch.Client.Models{
     [JsonObject]
     public class RequestJob{
         [JsonProperty("JobHandleTimeoutSeconds")]

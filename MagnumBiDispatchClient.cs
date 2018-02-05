@@ -6,11 +6,11 @@ using System.Security.Authentication;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using MagnumBi.Dispatch.Client.Models;
 using Newtonsoft.Json;
-using Optimal.MagnumMicroservices.Library.Models;
 
-namespace Optimal.MagnumMicroservices.Library{
-    public class MagnumMicroservicesClient{
+namespace MagnumBi.Dispatch.Client{
+    public class MagnumBiDispatchClient{
         private readonly CancellationTokenSource cts;
         private readonly HttpClient httpClient;
         private readonly string serverAddress;
@@ -23,7 +23,7 @@ namespace Optimal.MagnumMicroservices.Library{
         /// <param name="secretToken">Secret token</param>
         /// <param name="verifySsl">Verify ssl certificate. Reccomended to leave true.</param>
         /// <param name="cts">Optional token source used to cancel in progress requests.</param>
-        public MagnumMicroservicesClient(string serverAddress, string accessToken, string secretToken,
+        public MagnumBiDispatchClient(string serverAddress, string accessToken, string secretToken,
             bool verifySsl = true, CancellationTokenSource cts = default(CancellationTokenSource)){
             this.serverAddress = serverAddress;
             this.cts = cts;
