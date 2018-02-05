@@ -16,7 +16,7 @@ namespace MagnumBi.Dispatch.Client{
         private readonly string serverAddress;
 
         /// <summary>
-        ///     Creates a new Magnum Microservices Client
+        ///     Creates a new MagnumBI Dispatch Client
         /// </summary>
         /// <param name="serverAddress">The full uri of the server.</param>
         /// <param name="accessToken">The access token</param>
@@ -102,9 +102,15 @@ namespace MagnumBi.Dispatch.Client{
             return actualJob;
         }
 
-        public async Task QueueJob(string appId, dynamic data){
+        /// <summary>
+        /// Queues a new job on the <paramref name="queueId"/> job queue.
+        /// </summary>
+        /// <param name="queueId">The id of the queue to add job to.</param>
+        /// <param name="data">The job data.</param>
+        /// <returns></returns>
+        public async Task QueueJob(string queueId, dynamic data){
             HttpContent content = new StringContent(JsonConvert.SerializeObject(new QueueJob{
-                AppId = appId,
+                AppId = queueId,
                 Data = data
             }));
             content.Headers.ContentType = MediaTypeHeaderValue.Parse("application/json");
@@ -117,9 +123,16 @@ namespace MagnumBi.Dispatch.Client{
             }
         }
 
-        public async Task CompleteJob(string appId, string jobId){
+
+        /// <summary>
+        /// Completes a job
+        /// </summary>
+        /// <param name="queueId">The queue id of the job to complete</param>
+        /// <param name="jobId">The id of the job we are completing.</param>
+        /// <returns></returns>
+        public async Task CompleteJob(string queueId, string jobId){
             HttpContent content = new StringContent(JsonConvert.SerializeObject(new CompleteJob{
-                AppId = appId,
+                AppId = queueId,
                 JobId = jobId
             }));
             content.Headers.ContentType = MediaTypeHeaderValue.Parse("application/json");
