@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETStandard,Version=v1.3/",
-    "signature": "f86628f3f338df5baabde80df86dc4eaaa1f0c93"
+    "signature": "bae4501885d0e1ccd22ea974446d9763137c6e23"
   },
   "compilationOptions": {},
   "targets": {
@@ -10,7 +10,8 @@
       "MagnumBi.Dispatch.Client/1.0.0": {
         "dependencies": {
           "NETStandard.Library": "1.6.1",
-          "Newtonsoft.Json": "10.0.3"
+          "Newtonsoft.Json": "10.0.3",
+          "System.Net.Http": "4.3.3"
         },
         "runtime": {
           "MagnumBi.Dispatch.Client.dll": {}
@@ -68,7 +69,7 @@
           "System.IO.FileSystem.Primitives": "4.3.0",
           "System.Linq": "4.3.0",
           "System.Linq.Expressions": "4.3.0",
-          "System.Net.Http": "4.3.0",
+          "System.Net.Http": "4.3.3",
           "System.Net.Primitives": "4.3.0",
           "System.Net.Sockets": "4.3.0",
           "System.ObjectModel": "4.3.0",
@@ -376,7 +377,7 @@
           "System.Runtime": "4.3.0"
         }
       },
-      "System.Net.Http/4.3.0": {
+      "System.Net.Http/4.3.3": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "1.1.0",
           "Microsoft.Win32.Primitives": "4.3.0",
@@ -393,6 +394,7 @@
           "System.Runtime.Extensions": "4.3.0",
           "System.Runtime.Handles": "4.3.0",
           "System.Runtime.InteropServices": "4.3.0",
+          "System.Security.Cryptography.Encoding": "4.3.0",
           "System.Security.Cryptography.X509Certificates": "4.3.0",
           "System.Text.Encoding": "4.3.0",
           "System.Threading": "4.3.0",
@@ -1011,12 +1013,12 @@
       "path": "system.linq.expressions/4.3.0",
       "hashPath": "system.linq.expressions.4.3.0.nupkg.sha512"
     },
-    "System.Net.Http/4.3.0": {
+    "System.Net.Http/4.3.3": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-+FPjIVw04sb64PFGGbRJjg4Ss+8lIx70C7y2BGCEGmlgnOJoV0dVi8B6bqCV6mYQY/l1S7uwi+z1ZfMrJMI5rQ==",
-      "path": "system.net.http/4.3.0",
-      "hashPath": "system.net.http.4.3.0.nupkg.sha512"
+      "sha512": "sha512-7rCqIbkC/P2+A00NoDH5gnvFhADmX7Dc4INvsOajbU1MVhktE9vZNrjPtF82N6Uo7obK+yzlrPUv/M+snnN/9w==",
+      "path": "system.net.http/4.3.3",
+      "hashPath": "system.net.http.4.3.3.nupkg.sha512"
     },
     "System.Net.Primitives/4.3.0": {
       "type": "package",
