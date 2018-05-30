@@ -7,3 +7,12 @@ C:\Users\TimGray\Documents\VCS\magnumbi_dispatch_lib_dotnet_core_p1400\MagnumBi.
 C:\Users\TimGray\Documents\VCS\magnumbi_dispatch_lib_dotnet_core_p1400\MagnumBi.Dispatch.Client\obj\Debug\netstandard1.3\MagnumBi.Dispatch.Client.dll
 C:\Users\TimGray\Documents\VCS\magnumbi_dispatch_lib_dotnet_core_p1400\MagnumBi.Dispatch.Client\obj\Debug\netstandard1.3\MagnumBi.Dispatch.Client.pdb
 C:\Users\TimGray\Documents\VCS\magnumbi_dispatch_lib_dotnet_core_p1400\MagnumBi.Dispatch.Client\obj\Debug\netstandard1.3\MagnumBi.Dispatch.Client.csprojResolveAssemblyReference.cache
+C:\Users\TimGray\Documents\VCS\MagnumBI.MicroserviceBase\MagnumBi.Dispatch.Client\bin\Debug\netstandard1.3\MagnumBi.Dispatch.Client.deps.json
+C:\Users\TimGray\Documents\VCS\MagnumBI.MicroserviceBase\MagnumBi.Dispatch.Client\bin\Debug\netstandard1.3\MagnumBi.Dispatch.Client.dll
+C:\Users\TimGray\Documents\VCS\MagnumBI.MicroserviceBase\MagnumBi.Dispatch.Client\bin\Debug\netstandard1.3\MagnumBi.Dispatch.Client.pdb
+C:\Users\TimGray\Documents\VCS\MagnumBI.MicroserviceBase\MagnumBi.Dispatch.Client\obj\Debug\netstandard1.3\MagnumBi.Dispatch.Client.csprojAssemblyReference.cache
+C:\Users\TimGray\Documents\VCS\MagnumBI.MicroserviceBase\MagnumBi.Dispatch.Client\obj\Debug\netstandard1.3\MagnumBi.Dispatch.Client.csproj.CoreCompileInputs.cache
+C:\Users\TimGray\Documents\VCS\MagnumBI.MicroserviceBase\MagnumBi.Dispatch.Client\obj\Debug\netstandard1.3\MagnumBi.Dispatch.Client.AssemblyInfoInputs.cache
+C:\Users\TimGray\Documents\VCS\MagnumBI.MicroserviceBase\MagnumBi.Dispatch.Client\obj\Debug\netstandard1.3\MagnumBi.Dispatch.Client.AssemblyInfo.cs
+C:\Users\TimGray\Documents\VCS\MagnumBI.MicroserviceBase\MagnumBi.Dispatch.Client\obj\Debug\netstandard1.3\MagnumBi.Dispatch.Client.dll
+C:\Users\TimGray\Documents\VCS\MagnumBI.MicroserviceBase\MagnumBi.Dispatch.Client\obj\Debug\netstandard1.3\MagnumBi.Dispatch.Client.pdb
